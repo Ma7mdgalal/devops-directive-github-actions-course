@@ -4,17 +4,18 @@ on:
   workflow_dispatch:
 
 jobs:
+# first job: run a step with an inline bash script, an inline python script, and an action from the GitHub Action marketplace
   say-hello-inline-bash:
     runs-on: ubuntu-24.04
     steps:
       - run: echo "Hello from an inline bash script in a GitHub Action Workflow!"
-
+# second job: run a step with an inline python script, and an action from the GitHub Action marketplace
   say-hello-inline-python:
     runs-on: ubuntu-24.04
     steps:
       - run: print("Hello from an inline python script in a GitHub Action Workflow!")
         shell: python
-
+# third job: run a step with an action from the GitHub Action marketplace
   say-hello-action:
     runs-on: ubuntu-24.04
     steps:
